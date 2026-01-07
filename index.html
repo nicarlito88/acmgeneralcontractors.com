@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACM General Contractors | Abatement • Construction • Mitigation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1E40AF;      /* Industrial Blue */
+      --navy: #0B1B3B;      /* Deep anchor tone */
+      --text: #111827;      /* Near-black */
+      --muted: #6B7280;     /* Secondary text */
+      --line: #E5E7EB;      /* Dividers */
+      --bg: #FFFFFF;        /* Primary background */
+      --soft: #F8FAFC;      /* Light section background */
+      --card: #FFFFFF;      /* Card background */
+      --shadow: 0 12px 30px rgba(17,24,39,0.08);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+      z-index: 50;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 260px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(30,64,175,0.14), rgba(11,27,59,0.08));
+      border: 1px solid rgba(229,231,235,0.92);
+      display: grid;
+      place-items: center;
+      color: var(--blue);
+      font-weight: 900;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-title { display: flex; flex-direction: column; gap: 2px; line-height: 1.15; }
+    .brand-title strong { font-size: 16px; }
+    .brand-title span { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 260px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 13px;
+      color: rgba(17,24,39,0.82);
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    nav a:hover { background: rgba(30,64,175,0.06); color: var(--text); }
+
+    .header-cta { display: flex; gap: 10px; align-items: center; justify-content: flex-end; min-width: 260px; }
+
+    .btn {
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      letter-spacing: 0.01em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+
+    .btn:active { transform: translateY(1px); }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(30,64,175,0.18);
+    }
+
+    .btn-primary:hover { box-shadow: 0 14px 28px rgba(30,64,175,0.22); }
+
+    .btn-outline {
+      border-color: rgba(30,64,175,0.35);
+      color: var(--blue);
+      background: rgba(30,64,175,0.03);
+    }
+
+    .btn-outline:hover {
+      background: rgba(30,64,175,0.06);
+      border-color: rgba(30,64,175,0.50);
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: rgba(17,24,39,0.72);
+      background: rgba(17,24,39,0.03);
+      border: 1px solid rgba(229,231,235,0.85);
+      padding: 8px 12px;
+      border-radius: 999px;
+    }
+
+    /* Hero */
+    .hero { padding: 86px 0 30px 0; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.92fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .kicker { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+
+    h1 {
+      font-size: 46px;
+      line-height: 1.14;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .subhead {
+      color: rgba(17,24,39,0.72);
+      font-size: 18px;
+      margin: 0 0 24px 0;
+      max-width: 56ch;
+    }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+
+    .trust-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+      color: rgba(17,24,39,0.68);
+      font-size: 13px;
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(248,250,252,0.9);
+      border: 1px solid rgba(229,231,235,0.85);
+    }
+
+    .trust-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--blue);
+      box-shadow: 0 0 0 4px rgba(30,64,175,0.12);
+    }
+
+    .hero-visual {
+      background: linear-gradient(180deg, rgba(248,250,252,1), rgba(255,255,255,1));
+      border: 1px solid rgba(229,231,235,0.9);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      height: 420px;
+      position: relative;
+      overflow: hidden;
+      padding: 18px;
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(255,255,255,0.88);
+      border: 1px solid rgba(229,231,235,0.9);
+      border-radius: 14px;
+      padding: 12px 12px;
+      backdrop-filter: blur(8px);
+      display: grid;
+      gap: 3px;
+      z-index: 3;
+    }
+
+    .hero-badge strong { font-size: 13px; }
+    .hero-badge span { font-size: 12px; color: rgba(17,24,39,0.65); }
+
+    /* Premium placeholders */
+    .ph {
+      height: 100%;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid rgba(229,231,235,0.92);
+      background: radial-gradient(1200px 500px at 10% 10%, rgba(30,64,175,0.12), transparent 55%),
+                  radial-gradient(900px 450px at 90% 20%, rgba(11,27,59,0.10), transparent 55%),
+                  linear-gradient(180deg, rgba(248,250,252,0.95), rgba(255,255,255,0.9));
+      display: grid;
+      align-content: center;
+      justify-items: start;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ph:before{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+      transform: translateX(-60%);
+      animation: shimmer 3.2s infinite;
+      opacity: .45;
+    }
+
+    @keyframes shimmer{
+      0%{ transform: translateX(-60%); }
+      100%{ transform: translateX(160%); }
+    }
+
+    .ph-title { font-weight: 900; color: rgba(11,27,59,0.92); font-size: 14px; letter-spacing: .01em; }
+    .ph-sub { margin-top: 6px; font-size: 13px; color: rgba(107,114,128,0.95); }
+    .ph-cap {
+      margin-top: 12px;
+      font-size: 12px;
+      color: rgba(17,24,39,0.62);
+      border-top: 1px solid rgba(229,231,235,0.85);
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    /* Sections */
+    section { padding: 84px 0; border-top: 1px solid transparent; }
+    .soft { background: var(--soft); }
+
+    h2 { font-size: 34px; margin: 0 0 12px 0; letter-spacing: -0.015em; }
+    .lead { margin: 0; color: rgba(17,24,39,0.70); max-width: 70ch; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 42px; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(229,231,235,0.95);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(17,24,39,0.05);
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      min-height: 210px;
+    }
+
+    .card:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(17,24,39,0.08); border-color: rgba(30,64,175,0.22); }
+    .card h3 { margin: 0 0 8px 0; font-size: 18px; }
+    .card p { margin: 0 0 14px 0; color: rgba(17,24,39,0.68); }
+
+    .bullets { margin: 0; padding-left: 18px; color: rgba(17,24,39,0.68); font-size: 14px; }
+    .bullets li { margin: 8px 0; }
+
+    .blue-band {
+      background: var(--navy);
+      color: white;
+      padding: 70px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .band-inner { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; }
+    .band-inner h2 { margin: 0; color: white; font-size: 30px; }
+
+    .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; margin-top: 36px; }
+
+    .step {
+      background: white;
+      border: 1px solid rgba(229,231,235,0.95);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 10px 24px rgba(17,24,39,0.05);
+      text-align: left;
+      min-height: 96px;
+    }
+
+    .step strong {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      background: rgba(30,64,175,0.08);
+      color: var(--blue);
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .step div { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+    .step span { color: rgba(17,24,39,0.62); font-size: 13px; display: block; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 34px; align-items: start; }
+
+    .check-card {
+      background: white;
+      border: 1px solid rgba(229,231,235,0.95);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(17,24,39,0.06);
+    }
+
+    .check-card ul { margin: 0; padding-left: 18px; color: rgba(17,24,39,0.68); }
+    .check-card li { margin: 10px 0; }
+    .mini { color: rgba(17,24,39,0.62); font-size: 13px; margin-top: 14px; }
+
+    .proof { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 38px; }
+
+    /* Contact */
+    .contact { padding: 84px 0 92px 0; }
+    .contact-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 28px; align-items: start; margin-top: 32px; }
+
+    .form {
+      background: white;
+      border: 1px solid rgba(229,231,235,0.95);
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(17,24,39,0.06);
+      padding: 30px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 12px;
+      border: 1px solid #D1D5DB;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(30,64,175,0.55);
+      box-shadow: 0 0 0 4px rgba(30,64,175,0.10);
+    }
+
+    textarea { min-height: 96px; resize: vertical; }
+
+    footer { border-top: 1px solid var(--line); padding: 28px 0; color: rgba(17,24,39,0.62); font-size: 13px; }
+
+    .footer-inner { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; }
+
+    /* Mobile */
+    .mobile-bar {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+      padding: 10px 12px;
+      display: none;
+      gap: 10px;
+      z-index: 60;
+    }
+
+    .mobile-bar a { flex: 1; border-radius: 14px; }
+
+    @media(max-width: 980px) {
+      nav { display: none; }
+      .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+      h1 { font-size: 38px; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .proof, .grid-2 { grid-template-columns: 1fr; }
+      .band-inner { grid-template-columns: 1fr; }
+      .mobile-bar { display: flex; }
+      .header-cta .btn-outline { display: none; }
+      .brand { min-width: auto; }
+      .header-cta { min-width: auto; }
+      body { padding-bottom: 74px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo-mark" aria-label="ACM">ACM</div>
+        <div class="brand-title">
+          <strong>ACM General Contractors</strong>
+          <span>Abatement • Construction • Mitigation</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#adjusters">For Adjusters</a>
+        <a href="#commercial">Commercial</a>
+        <a href="#mold">Mold/Abatement</a>
+        <a href="#proof">Results</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-outline" href="#contact">Request Inspection</a>
+        <a class="btn btn-primary" href="#contact">Call 24/7</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">
+          <span class="pill">24/7 Emergency Response</span>
+          <span class="pill">Insurance-Ready Documentation</span>
+          <span class="pill">Residential & Commercial</span>
+        </div>
+
+        <h1>Premium Restoration Operations — Mitigation, Abatement, and Full Reconstruction</h1>
+        <p class="subhead">ACM General Contractors stabilizes losses fast, documents the file thoroughly, and delivers a clean rebuild under licensed GC oversight — built for policyholders <em>and</em> insurance inspections.</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Call 24/7 Emergency</a>
+          <a class="btn btn-outline" href="#contact">Request an Inspection</a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item"><span class="trust-dot"></span> Moisture mapping & daily readings</div>
+          <div class="trust-item"><span class="trust-dot"></span> Containment-first approach</div>
+          <div class="trust-item"><span class="trust-dot"></span> Itemized scopes & photo logs</div>
+          <div class="trust-item"><span class="trust-dot"></span> Single GC-managed workflow</div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-badge">
+          <strong>Adjuster-friendly file</strong>
+          <span>Clean documentation + clear scope</span>
+        </div>
+
+        <div style="display:grid; grid-template-rows:1fr 1fr; gap:12px; width:100%; height:100%;">
+          <div class="ph">
+            <div class="ph-title">Residential Mitigation Visual</div>
+            <div class="ph-sub">Extraction • drying • monitoring • equipment placement</div>
+            <div class="ph-cap">Caption: “Mitigation Phase: extraction • drying • monitoring”</div>
+          </div>
+
+          <div class="ph">
+            <div class="ph-title">Residential Reconstruction Visual</div>
+            <div class="ph-sub">Rebuild to code • finishes • close-out</div>
+            <div class="ph-cap">Caption: “Reconstruction Phase: rebuild • finishes”</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CERTIFICATIONS -->
+<section class="soft">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px; align-items:center; text-align:center;">
+      <div class="pill">Licensed General Contractor</div>
+      <div class="pill">IICRC-Aligned Processes</div>
+      <div class="pill">Fully Insured</div>
+      <div class="pill">Residential & Commercial</div>
+      <div class="pill">Inspection-Ready Documentation</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <h2>One Team. Full Loss Lifecycle Coverage.</h2>
+    <p class="lead">We reduce severity, remove hazards, and restore the structure — with documentation designed to hold up during carrier review and site inspection.</p>
+
+    <div class="grid-3">
+      <div class="card">
+        <h3>Mitigation</h3>
+        <p>Stop the spread. Stabilize the structure. Preserve what can be saved.</p>
+        <ul class="bullets">
+          <li>Water extraction & structural drying</li>
+          <li>Dehumidification & environmental control</li>
+          <li>Monitoring with documented readings</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Abatement</h3>
+        <p>Containment and controlled removal of hazardous or contaminated materials.</p>
+        <ul class="bullets">
+          <li>Containment setup & negative air support</li>
+          <li>Mold-contaminated materials removal</li>
+          <li>Controlled demo & debris handling</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Construction</h3>
+        <p>Professional rebuild to pre-loss condition (or better) under GC oversight.</p>
+        <ul class="bullets">
+          <li>Framing, drywall, flooring, finishes</li>
+          <li>Code-compliant restoration workflow</li>
+          <li>Clean close-out and walk-through</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLUE BAND CTA -->
+<div class="blue-band">
+  <div class="container">
+    <div class="band-inner">
+      <h2>Premium execution. Carrier-ready documentation. Zero chaos.</h2>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a class="btn btn-outline" href="#contact" style="border-color:rgba(255,255,255,0.55); color:#fff; background:rgba(255,255,255,0.06);">Request Inspection</a>
+        <a class="btn btn-primary" href="#contact" style="background:#fff; color:var(--navy); box-shadow:none;">Call 24/7</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<section id="process" class="soft">
+  <div class="container">
+    <h2>Protocol-Driven Recovery</h2>
+    <p class="lead">We run the job like an operation — with phase clarity, documented checkpoints, and clean handoffs from mitigation to rebuild.</p>
+
+    <div class="steps">
+      <div class="step"><strong>1</strong><div>Inspect & Document</div><span>Photos, measurements, initial readings</span></div>
+      <div class="step"><strong>2</strong><div>Contain & Protect</div><span>Prevent spread; protect unaffected areas</span></div>
+      <div class="step"><strong>3</strong><div>Mitigate</div><span>Drying, dehumidification, monitoring</span></div>
+      <div class="step"><strong>4</strong><div>Remediate / Abate</div><span>Remove contaminated materials safely</span></div>
+      <div class="step"><strong>5</strong><div>Rebuild</div><span>Restore to pre-loss condition; close-out</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR ADJUSTERS -->
+<section id="adjusters">
+  <div class="container">
+    <h2>Built for Insurance Adjusters</h2>
+    <p class="lead">We provide a cleaner claim file by delivering structured documentation, transparent scope, and inspection-ready reporting — reducing friction and rework.</p>
+
+    <div class="grid-2">
+      <div class="card" style="min-height:auto;">
+        <h3>Documentation Package</h3>
+        <p>Standard deliverables designed to support carrier review and site inspection.</p>
+        <ul class="bullets">
+          <li>Pre-mitigation condition photo log</li>
+          <li>Moisture maps & daily readings (when applicable)</li>
+          <li>Equipment placement notes and monitoring cadence</li>
+          <li>Itemized scope outline for phase transitions</li>
+          <li>Final condition photos at close-out</li>
+        </ul>
+        <p class="mini">Note: Deliverables vary based on loss type, access, and site conditions.</p>
+      </div>
+
+      <div class="check-card">
+        <h3 style="margin-top:0;">Operational Advantages</h3>
+        <ul>
+          <li>Single point of accountability (GC-managed workflow)</li>
+          <li>Clear phase separation: mitigation vs rebuild</li>
+          <li>Containment-first approach to reduce secondary damage</li>
+          <li>Inspection coordination support and site readiness</li>
+        </ul>
+        <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="#contact">Request Inspection</a>
+          <a class="btn btn-outline" href="#contact">Claims Contact</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMERCIAL -->
+<section id="commercial" class="soft">
+  <div class="container">
+    <h2>Commercial Losses</h2>
+    <p class="lead">Facilities-first execution with controlled environments, clear phase separation, and documentation that supports inspections and carrier review.</p>
+
+    <div class="grid-2" style="margin-top:34px;">
+      <div class="ph">
+        <div class="ph-title">Commercial Mitigation Visual</div>
+        <div class="ph-sub">Containment • industrial drying • monitored conditions</div>
+        <div class="ph-cap">Caption: “Commercial Mitigation: containment • industrial drying”</div>
+      </div>
+      <div class="ph">
+        <div class="ph-title">Commercial Reconstruction Visual</div>
+        <div class="ph-sub">Structural repairs • build-back • completion reporting</div>
+        <div class="ph-cap">Caption: “Commercial Reconstruction: restore • close-out”</div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:18px;">
+      <div class="ph">
+        <div class="ph-title">Commercial BEFORE Visual</div>
+        <div class="ph-sub">Documented loss condition</div>
+        <div class="ph-cap">Caption: “BEFORE: commercial water intrusion”</div>
+      </div>
+      <div class="ph">
+        <div class="ph-title">Commercial AFTER Visual</div>
+        <div class="ph-sub">Restored to code / pre-loss</div>
+        <div class="ph-cap">Caption: “AFTER: office restored to code”</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOLD / ABATEMENT -->
+<section id="mold">
+  <div class="container">
+    <h2>Mold & Abatement Operations</h2>
+    <p class="lead">Containment-first controls with controlled removal and restoration-ready surfaces — designed to reduce secondary damage and support inspection-ready documentation.</p>
+
+    <div class="grid-2" style="margin-top:34px;">
+      <div class="ph">
+        <div class="ph-title">Containment / Negative Air Visual</div>
+        <div class="ph-sub">Isolation • negative air • controlled access</div>
+        <div class="ph-cap">Caption: “Containment: isolation • negative air • controlled access”</div>
+      </div>
+      <div class="ph">
+        <div class="ph-title">Controlled Removal / Abatement Visual</div>
+        <div class="ph-sub">Controlled demo • debris handling • restoration-ready</div>
+        <div class="ph-cap">Caption: “Abatement/Demo: controlled removal • restoration-ready”</div>
+      </div>
+    </div>
+
+    <p class="mini" style="margin-top:14px;">Note: Specific protocols and regulatory requirements vary by jurisdiction and site conditions.</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof" class="soft">
+  <div class="container">
+    <h2>Results You Can See</h2>
+    <p class="lead">When we swap in real photography, this section becomes your credibility engine for adjusters and property owners.</p>
+
+    <div class="proof">
+      <div class="ph">
+        <div class="ph-title">Residential BEFORE Visual</div>
+        <div class="ph-sub">Documented loss condition (water/fire)</div>
+        <div class="ph-cap">Caption: “BEFORE: documented residential water intrusion”</div>
+      </div>
+      <div class="ph">
+        <div class="ph-title">Residential AFTER Visual</div>
+        <div class="ph-sub">Restored to pre-loss condition</div>
+        <div class="ph-cap">Caption: “AFTER: residential interior restored to pre-loss condition”</div>
+      </div>
+    </div>
+
+    <div class="grid-3" style="margin-top:18px;">
+      <div class="card" style="min-height:auto;">
+        <h3>Water Loss</h3>
+        <p>Dry-out + controlled rebuild with documented checkpoints.</p>
+      </div>
+      <div class="card" style="min-height:auto;">
+        <h3>Mold Event</h3>
+        <p>Containment-first remediation and material replacement.</p>
+      </div>
+      <div class="card" style="min-height:auto;">
+        <h3>Fire / Smoke</h3>
+        <p>Stabilization, controlled demo, and reconstruction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>Request an Inspection</h2>
+    <p class="lead">Tell us what happened. We respond fast and advise next steps — with an inspection-ready approach.</p>
+
+    <div class="contact-grid">
+      <div class="card" style="min-height:auto;">
+        <h3>Claims & Emergency Contact</h3>
+        <p style="margin:0 0 12px 0; color:rgba(17,24,39,0.68);">Use this section to display your official phone, email, and service area. Keep it simple and authoritative.</p>
+        <ul class="bullets">
+          <li><strong>24/7 Emergency:</strong> (XXX) XXX-XXXX</li>
+          <li><strong>Claims Contact:</strong> claims@yourdomain.com</li>
+          <li><strong>Service Area:</strong> Your County / Metro Area</li>
+        </ul>
+        <p class="mini">Recommended: add license number and insurance info once finalized.</p>
+      </div>
+
+      <div class="form">
+        <input placeholder="Full Name" />
+        <input placeholder="Phone" />
+        <input placeholder="Property Address" />
+        <select>
+          <option>Type of Loss</option>
+          <option>Water</option>
+          <option>Fire / Smoke</option>
+          <option>Mold</option>
+          <option>Other</option>
+        </select>
+        <select>
+          <option>Is this an insurance claim?</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <textarea placeholder="Brief description (optional): what happened, when, and current conditions."></textarea>
+        <a class="btn btn-primary" style="width:100%;" href="#">Submit Request</a>
+        <div class="mini">Emergency situation? Call now — 24/7 response.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>© ACM General Contractors — Abatement • Construction • Mitigation</div>
+      <div>Premium restoration operations • Insurance-ready documentation</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile Sticky Bar -->
+<div class="mobile-bar">
+  <a class="btn btn-primary" href="#contact">Call Now</a>
+  <a class="btn btn-outline" href="#contact">Request Inspection</a>
+</div>
+
+</body>
+</html>
