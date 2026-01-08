@@ -1,648 +1,640 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2822
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ACM General Contractors | Abatement • Construction • Mitigation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      /* Brand */
+      --brand:#1E40AF;         /* Industrial Blue */
+      --brand2:#0B1B3B;        /* Deep Navy */
+      --ink:#0B1220;           /* Near-black */
+      --muted:#5B6472;         /* Secondary */
+      --line:#E6EAF0;          /* Dividers */
+      --bg:#FFFFFF;
+      --soft:#F6F8FB;
+      --card:#FFFFFF;
+      --shadow:0 18px 55px rgba(11,18,32,.10);
+      --radius:18px;
+      --max:1140px;
+    }
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-  <meta charset="UTF-8" />\
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
-  <title>ACM General Contractors | Abatement \'95 Construction \'95 Mitigation</title>\
-  <link rel="preconnect" href="https://fonts.googleapis.com">\
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\
-  <style>\
-    :root\{\
-      /* Brand */\
-      --brand:#1E40AF;         /* Industrial Blue */\
-      --brand2:#0B1B3B;        /* Deep Navy */\
-      --ink:#0B1220;           /* Near-black */\
-      --muted:#5B6472;         /* Secondary */\
-      --line:#E6EAF0;          /* Dividers */\
-      --bg:#FFFFFF;\
-      --soft:#F6F8FB;\
-      --card:#FFFFFF;\
-      --shadow:0 18px 55px rgba(11,18,32,.10);\
-      --radius:18px;\
-      --max:1140px;\
-    \}\
-\
-    *\{ box-sizing:border-box; \}\
-    html\{ scroll-behavior:smooth; \}\
-    body\{\
-      margin:0;\
-      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;\
-      color:var(--ink);\
-      background:var(--bg);\
-      line-height:1.55;\
-      -webkit-font-smoothing:antialiased;\
-      -moz-osx-font-smoothing:grayscale;\
-    \}\
-    a\{ color:inherit; text-decoration:none; \}\
-    img\{ max-width:100%; display:block; \}\
-\
-    .container\{ max-width:var(--max); margin:0 auto; padding:0 22px; \}\
-\
-    /* Header */\
-    header\{\
-      position:sticky; top:0; z-index:50;\
-      background:rgba(255,255,255,.86);\
-      backdrop-filter:blur(12px);\
-      border-bottom:1px solid var(--line);\
-    \}\
-    .header\{\
-      display:flex; align-items:center; justify-content:space-between;\
-      padding:14px 0; gap:18px;\
-    \}\
-    .brand\{\
-      display:flex; align-items:center; gap:12px;\
-      min-width:240px;\
-    \}\
-    .brand img\{\
-      height:44px; width:auto;\
-    \}\
-    .brand .title\{ display:flex; flex-direction:column; line-height:1.1; \}\
-    .brand .title strong\{ font-weight:800; font-size:14px; letter-spacing:.01em; \}\
-    .brand .title span\{ font-size:11px; color:var(--muted); letter-spacing:.14em; text-transform:uppercase; \}\
-\
-    nav\{ display:flex; gap:16px; align-items:center; justify-content:center; flex:1; \}\
-    nav a\{\
-      font-size:13px;\
-      color:rgba(11,18,32,.82);\
-      padding:8px 10px;\
-      border-radius:999px;\
-    \}\
-    nav a:hover\{ background:rgba(30,64,175,.07); \}\
-\
-    .cta\{ display:flex; gap:10px; align-items:center; min-width:240px; justify-content:flex-end; \}\
-    .btn\{\
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;\
-      padding:11px 16px; border-radius:999px;\
-      font-weight:700; font-size:13px;\
-      border:1px solid transparent;\
-      transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;\
-      user-select:none;\
-      white-space:nowrap;\
-    \}\
-    .btn:active\{ transform:translateY(1px); \}\
-    .btn.primary\{ background:var(--brand); color:#fff; box-shadow:0 12px 28px rgba(30,64,175,.25); \}\
-    .btn.primary:hover\{ box-shadow:0 16px 38px rgba(30,64,175,.30); \}\
-    .btn.ghost\{ background:rgba(30,64,175,.05); color:var(--brand); border-color:rgba(30,64,175,.18); \}\
-    .btn.ghost:hover\{ background:rgba(30,64,175,.08); border-color:rgba(30,64,175,.28); \}\
-\
-    /* Hero */\
-    .hero\{\
-      padding:70px 0 22px;\
-      background:\
-        radial-gradient(1200px 520px at 10% 0%, rgba(30,64,175,.12), transparent 55%),\
-        radial-gradient(900px 500px at 92% 18%, rgba(11,27,59,.10), transparent 60%),\
-        linear-gradient(180deg, #FFFFFF, #FFFFFF);\
-    \}\
-    .hero-grid\{\
-      display:grid;\
-      grid-template-columns:1.18fr .82fr;\
-      gap:40px;\
-      align-items:center;\
-    \}\
-    .chips\{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; \}\
-    .chip\{\
-      display:inline-flex; align-items:center; gap:8px;\
-      padding:7px 12px; border-radius:999px;\
-      border:1px solid var(--line);\
-      background:rgba(255,255,255,.75);\
-      color:rgba(11,18,32,.78);\
-      font-size:12px; font-weight:600;\
-    \}\
-    .dot\{ width:8px; height:8px; border-radius:99px; background:var(--brand); box-shadow:0 0 0 4px rgba(30,64,175,.12); \}\
-\
-    h1\{\
-      margin:0 0 12px;\
-      font-size:44px;\
-      line-height:1.12;\
-      letter-spacing:-.02em;\
-    \}\
-    .sub\{\
-      margin:0 0 22px;\
-      font-size:16.5px;\
-      color:rgba(11,18,32,.72);\
-      max-width:62ch;\
-    \}\
-\
-    .hero-actions\{ display:flex; gap:12px; flex-wrap:wrap; \}\
-\
-    .trust\{\
-      display:flex; flex-wrap:wrap; gap:10px;\
-      margin-top:22px;\
-    \}\
-    .trust .pill\{\
-      padding:10px 12px;\
-      border-radius:14px;\
-      background:rgba(255,255,255,.86);\
-      border:1px solid var(--line);\
-      font-size:12.5px;\
-      color:rgba(11,18,32,.70);\
-      display:inline-flex; align-items:center; gap:10px;\
-    \}\
-    .trust svg\{ width:16px; height:16px; color:var(--brand); \}\
-\
-    .hero-panel\{\
-      border:1px solid var(--line);\
-      border-radius:22px;\
-      background:rgba(255,255,255,.75);\
-      box-shadow:var(--shadow);\
-      overflow:hidden;\
-    \}\
-    .panel-top\{\
-      padding:14px 14px 0;\
-      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;\
-    \}\
-    .badge\{\
-      background:rgba(11,27,59,.92);\
-      color:#fff;\
-      font-size:12px;\
-      font-weight:800;\
-      letter-spacing:.08em;\
-      text-transform:uppercase;\
-      padding:10px 12px;\
-      border-radius:14px;\
-    \}\
-    .panel-body\{ padding:14px; \}\
-    .media\{\
-      height:160px;\
-      border-radius:16px;\
-      border:1px solid var(--line);\
-      background:linear-gradient(180deg, rgba(246,248,251,1), rgba(255,255,255,1));\
-      display:grid; place-items:center;\
-      color:rgba(91,100,114,.88);\
-      font-weight:700;\
-      text-align:center;\
-      padding:16px;\
-    \}\
-    .media small\{ display:block; margin-top:6px; font-weight:600; color:rgba(91,100,114,.78); \}\
-\
-    .panel-grid\{\
-      display:grid;\
-      grid-template-columns:1fr;\
-      gap:12px;\
-      margin-top:12px;\
-    \}\
-    .panel-note\{\
-      border:1px solid var(--line);\
-      border-radius:16px;\
-      padding:12px;\
-      background:#fff;\
-      display:flex; gap:10px; align-items:flex-start;\
-    \}\
-    .panel-note b\{ font-size:13px; \}\
-    .panel-note p\{ margin:2px 0 0; font-size:12.5px; color:rgba(11,18,32,.70); \}\
-\
-    /* Sections */\
-    section\{ padding:76px 0; \}\
-    .soft\{ background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); \}\
-\
-    .section-head\{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; \}\
-    h2\{ margin:0; font-size:30px; letter-spacing:-.01em; \}\
-    .lead\{ margin:8px 0 0; color:rgba(11,18,32,.70); max-width:74ch; \}\
-\
-    .cards\{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:26px; \}\
-    .card\{\
-      background:var(--card);\
-      border:1px solid var(--line);\
-      border-radius:var(--radius);\
-      padding:20px;\
-      box-shadow:0 10px 26px rgba(11,18,32,.06);\
-      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;\
-      min-height:220px;\
-      overflow:hidden;\
-    \}\
-    .card:hover\{ transform:translateY(-2px); border-color:rgba(30,64,175,.22); box-shadow:0 16px 36px rgba(11,18,32,.08); \}\
-    .card .thumb\{\
-      height:120px;\
-      border-radius:14px;\
-      border:1px solid var(--line);\
-      background:linear-gradient(180deg, rgba(246,248,251,1), rgba(255,255,255,1));\
-      display:grid; place-items:center;\
-      color:rgba(91,100,114,.85);\
-      font-size:12px;\
-      font-weight:800;\
-      letter-spacing:.10em;\
-      text-transform:uppercase;\
-      margin-bottom:14px;\
-    \}\
-    .card h3\{ margin:0 0 6px; font-size:16px; font-weight:800; \}\
-    .card p\{ margin:0 0 10px; color:rgba(11,18,32,.70); font-size:13.5px; \}\
-    .card ul\{ margin:0; padding-left:18px; color:rgba(11,18,32,.70); font-size:13.5px; \}\
-    .card li\{ margin:7px 0; \}\
-\
-    /* Process */\
-    .steps\{ display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; margin-top:24px; \}\
-    .step\{\
-      background:#fff;\
-      border:1px solid var(--line);\
-      border-radius:16px;\
-      padding:16px;\
-      box-shadow:0 10px 26px rgba(11,18,32,.06);\
-      min-height:110px;\
-    \}\
-    .step .n\{\
-      width:34px; height:34px;\
-      border-radius:14px;\
-      background:rgba(30,64,175,.08);\
-      color:var(--brand);\
-      display:grid; place-items:center;\
-      font-weight:900;\
-      margin-bottom:10px;\
-    \}\
-    .step b\{ display:block; font-size:13px; \}\
-    .step span\{ display:block; margin-top:4px; color:rgba(11,18,32,.66); font-size:12.5px; \}\
-\
-    /* Adjuster block */\
-    .two\{ display:grid; grid-template-columns:1.05fr .95fr; gap:18px; margin-top:24px; \}\
-    .panel\{\
-      background:#fff;\
-      border:1px solid var(--line);\
-      border-radius:22px;\
-      padding:22px;\
-      box-shadow:0 12px 34px rgba(11,18,32,.07);\
-    \}\
-    .panel h3\{ margin:0 0 10px; font-size:16px; font-weight:900; \}\
-    .panel ul\{ margin:0; padding-left:18px; color:rgba(11,18,32,.70); font-size:13.5px; \}\
-    .panel li\{ margin:9px 0; \}\
-\
-    /* Proof */\
-    .proof\{\
-      display:grid; grid-template-columns:1fr 1fr;\
-      gap:14px; margin-top:24px;\
-    \}\
-    .proof .img\{\
-      border:1px solid var(--line);\
-      border-radius:22px;\
-      overflow:hidden;\
-      background:#fff;\
-      box-shadow:0 14px 42px rgba(11,18,32,.08);\
-    \}\
-    .proof .img .ph\{\
-      height:240px;\
-      display:grid; place-items:center;\
-      background:linear-gradient(180deg, rgba(246,248,251,1), rgba(255,255,255,1));\
-      color:rgba(91,100,114,.9);\
-      font-weight:900;\
-      letter-spacing:.10em;\
-      text-transform:uppercase;\
-    \}\
-    .proof .cap\{ padding:14px; font-size:12.5px; color:rgba(11,18,32,.70); \}\
-    .cap b\{ color:rgba(11,18,32,.92); \}\
-\
-    /* Contact */\
-    .contact\{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px; \}\
-    .form\{\
-      background:#fff;\
-      border:1px solid var(--line);\
-      border-radius:22px;\
-      padding:22px;\
-      box-shadow:0 12px 34px rgba(11,18,32,.07);\
-    \}\
-    input, select, textarea\{\
-      width:100%;\
-      padding:12px 12px;\
-      border:1px solid #D1D7E0;\
-      border-radius:14px;\
-      font:inherit;\
-      margin-bottom:10px;\
-      outline:none;\
-      background:#fff;\
-      font-size:13.5px;\
-    \}\
-    input:focus, select:focus, textarea:focus\{\
-      border-color:rgba(30,64,175,.55);\
-      box-shadow:0 0 0 4px rgba(30,64,175,.10);\
-    \}\
-    textarea\{ min-height:106px; resize:vertical; \}\
-\
-    footer\{ padding:26px 0; border-top:1px solid var(--line); color:rgba(11,18,32,.62); font-size:12.5px; \}\
-    .foot\{ display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; \}\
-\
-    /* Mobile */\
-    .mobilebar\{\
-      position:fixed; left:0; right:0; bottom:0; z-index:60;\
-      display:none;\
-      background:rgba(255,255,255,.88);\
-      backdrop-filter:blur(12px);\
-      border-top:1px solid var(--line);\
-      padding:10px 12px;\
-      gap:10px;\
-    \}\
-    .mobilebar .btn\{ flex:1; \}\
-\
-    @media(max-width: 980px)\{\
-      nav\{ display:none; \}\
-      .hero-grid\{ grid-template-columns:1fr; \}\
-      h1\{ font-size:36px; \}\
-      .cards\{ grid-template-columns:1fr; \}\
-      .steps\{ grid-template-columns:1fr; \}\
-      .two\{ grid-template-columns:1fr; \}\
-      .proof\{ grid-template-columns:1fr; \}\
-      .contact\{ grid-template-columns:1fr; \}\
-      .cta .ghost\{ display:none; \}\
-      .mobilebar\{ display:flex; \}\
-      body\{ padding-bottom:72px; \}\
-    \}\
-  </style>\
-</head>\
-<body>\
-\
-<header>\
-  <div class="container">\
-    <div class="header">\
-      <a class="brand" href="#top" aria-label="ACM General Contractors">\
-        <!-- Place your logo file at /assets/logo.png -->\
-        <img src="assets/logo.png" alt="ACM General Contractors logo">\
-        <div class="title">\
-          <strong>ACM General Contractors</strong>\
-          <span>Abatement \'95 Construction \'95 Mitigation</span>\
-        </div>\
-      </a>\
-\
-      <nav aria-label="Primary">\
-        <a href="#services">Services</a>\
-        <a href="#process">Process</a>\
-        <a href="#adjusters">For Adjusters</a>\
-        <a href="#proof">Results</a>\
-        <a href="#contact">Contact</a>\
-      </nav>\
-\
-      <div class="cta">\
-        <a class="btn ghost" href="#contact">Request Inspection</a>\
-        <a class="btn primary" href="tel:3059722232">Call 24/7</a>\
-      </div>\
-    </div>\
-  </div>\
-</header>\
-\
-<main id="top">\
-  <!-- HERO -->\
-  <section class="hero">\
-    <div class="container">\
-      <div class="hero-grid">\
-        <div>\
-          <div class="chips">\
-            <span class="chip"><span class="dot"></span> Emergency Mitigation</span>\
-            <span class="chip"><span class="dot"></span> Insurance-Ready Documentation</span>\
-            <span class="chip"><span class="dot"></span> Residential + Commercial</span>\
-          </div>\
-\
-          <h1>Loss stabilization first. Clean documentation. Controlled rebuild.</h1>\
-          <p class="sub">\
-            ACM is a GC-led restoration operator focused on <b>mitigation, abatement, and reconstruction</b> for water, fire/smoke, and mold events.\
-            We run a tight workflow designed to reduce severity, protect the structure, and support carrier review.\
-          </p>\
-\
-          <div class="hero-actions">\
-            <a class="btn primary" href="tel:3059722232">Call 24/7 Emergency</a>\
-            <a class="btn ghost" href="#adjusters">Adjuster Packet</a>\
-          </div>\
-\
-          <div class="trust">\
-            <div class="pill">\
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>\
-              Moisture mapping + daily readings (as applicable)\
-            </div>\
-            <div class="pill">\
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>\
-              Containment-first controls\
-            </div>\
-            <div class="pill">\
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>\
-              Phase clarity: Mitigation \uc0\u8594  Abatement \u8594  Rebuild\
-            </div>\
-          </div>\
-        </div>\
-\
-        <!-- Right hero panel: swap placeholders with real photos later -->\
-        <div class="hero-panel" aria-label="Hero proof panel">\
-          <div class="panel-top">\
-            <div class="badge">Adjuster-Friendly</div>\
-            <div style="color:rgba(11,18,32,.62); font-size:12px; font-weight:700;">Scope clarity \'95 photo log \'95 readings</div>\
-          </div>\
-          <div class="panel-body">\
-            <div class="media" style="padding:0; overflow:hidden;">\
-  <img src="assets/hero-mitigation.jpg" alt="Professional water damage mitigation with containment, air movers, and dehumidification equipment" style="width:100%; height:100%; object-fit:cover;">\
-</div>\
-\
-            <div class="panel-grid">\
-              <div class="panel-note">\
-                <div class="dot" style="margin-top:3px"></div>\
-                <div>\
-                  <b>Rapid Stabilization</b>\
-                  <p>Stop spread, control conditions, and protect unaffected areas.</p>\
-                </div>\
-              </div>\
-              <div class="panel-note">\
-                <div class="dot" style="margin-top:3px"></div>\
-                <div>\
-                  <b>Documentation Package</b>\
-                  <p>Photo log, readings, equipment notes, and phase handoffs.</p>\
-                </div>\
-              </div>\
-              <div class="panel-note">\
-                <div class="dot" style="margin-top:3px"></div>\
-                <div>\
-                  <b>GC-Managed Rebuild</b>\
-                  <p>Controlled reconstruction to code with clean close-out.</p>\
-                </div>\
-              </div>\
-            </div>\
-          </div>\
-        </div>\
-\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- SERVICES -->\
-  <section id="services">\
-    <div class="container">\
-      <div class="section-head">\
-        <div>\
-          <h2>Three capabilities. One accountable operator.</h2>\
-          <p class="lead">Your loss is handled end-to-end with phase clarity and inspection-ready outputs.</p>\
-        </div>\
-        <a class="btn ghost" href="#contact">Schedule Site Inspection</a>\
-      </div>\
-\
-      <div class="cards">\
-        <div class="card">\
-          <div class="thumb" style="padding:0; overflow:hidden;">\
-            <img src="assets/water-damage-mitigation-services.jpg" alt="Water damage mitigation services with professional drying equipment and moisture monitoring" style="width:100%; height:100%; object-fit:cover;">\
-          </div>\
-          <h3>Mitigation</h3>\
-          <p>Extract, dry, and stabilize quickly to reduce severity and secondary damage.</p>\
-          <ul>\
-            <li>Water extraction & structural drying</li>\
-            <li>Dehumidification & environmental control</li>\
-            <li>Monitoring cadence + documented readings</li>\
-          </ul>\
-        </div>\
-\
-        <div class="card">\
-          <div class="thumb" style="padding:0; overflow:hidden;">\
-            <img src="assets/mold-abatement-containment-services.jpg" alt="Mold abatement and containment services with negative air control and PPE" style="width:100%; height:100%; object-fit:cover;">\
-          </div>\
-          <h3>Abatement</h3>\
-          <p>Containment-first controls and controlled removal of contaminated materials.</p>\
-          <ul>\
-            <li>Containment setup & negative air support</li>\
-            <li>Mold-contaminated material removal</li>\
-            <li>Controlled demo & debris handling</li>\
-          </ul>\
-        </div>\
-\
-        <div class="card">\
-          <div class="thumb" style="padding:0; overflow:hidden;">\
-            <img src="assets/construction-rebuild-restoration-services.jpg" alt="Construction and rebuild restoration services under licensed general contractor oversight" style="width:100%; height:100%; object-fit:cover;">\
-          </div>\
-          <h3>Construction</h3>\
-          <p>Rebuild to pre-loss condition under licensed GC oversight with clean close-out.</p>\
-          <ul>\
-            <li>Framing, drywall, flooring, finishes</li>\
-            <li>Code-compliant restoration workflow</li>\
-            <li>Final walk-through & punch completion</li>\
-          </ul>\
-        </div>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- PROCESS -->\
-  <section id="process" class="soft">\
-    <div class="container">\
-      <h2>Protocol-driven workflow</h2>\
-      <p class="lead">Run the file like an operation: clean checkpoints, documented handoffs, no chaos.</p>\
-\
-      <div class="steps">\
-        <div class="step"><div class="n">1</div><b>Inspect & Document</b><span>Photos, measurements, initial readings</span></div>\
-        <div class="step"><div class="n">2</div><b>Contain & Protect</b><span>Prevent spread; protect unaffected areas</span></div>\
-        <div class="step"><div class="n">3</div><b>Mitigate</b><span>Drying, dehumidification, monitoring</span></div>\
-        <div class="step"><div class="n">4</div><b>Abate / Remediate</b><span>Controlled removal; restoration-ready surfaces</span></div>\
-        <div class="step"><div class="n">5</div><b>Rebuild</b><span>Restore to code; close-out reporting</span></div>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- FOR ADJUSTERS -->\
-  <section id="adjusters">\
-    <div class="container">\
-      <h2>Built for insurance adjusters</h2>\
-      <p class="lead">We reduce friction by delivering clear documentation, transparent scope, and inspection-ready conditions.</p>\
-\
-      <div class="two">\
-        <div class="panel">\
-          <h3>Standard documentation package</h3>\
-          <ul>\
-            <li>Pre-mitigation photo log + measurements</li>\
-            <li>Moisture mapping and documented readings (as applicable)</li>\
-            <li>Equipment placement notes and monitoring cadence</li>\
-            <li>Phase separation: mitigation vs abatement vs rebuild</li>\
-            <li>Final condition photos and close-out summary</li>\
-          </ul>\
-          <p style="margin:12px 0 0; color:rgba(11,18,32,.62); font-size:12.5px;">Deliverables vary by loss type, access, and site conditions.</p>\
-        </div>\
-\
-        <div class="panel">\
-          <h3>Carrier-friendly operating advantages</h3>\
-          <ul>\
-            <li>Single point of accountability (GC-led workflow)</li>\
-            <li>Containment-first controls to reduce secondary damage</li>\
-            <li>Inspection coordination and site readiness support</li>\
-            <li>Clear scope alignment for faster approvals</li>\
-          </ul>\
-          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">\
-            <a class="btn primary" href="mailto:carlos@acmgcc.com">Claims Contact</a>\
-            <a class="btn ghost" href="#contact">Request Inspection</a>\
-          </div>\
-        </div>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- RESULTS / PROOF -->\
-  <section id="proof" class="soft">\
-    <div class="container">\
-      <h2>Results you can see</h2>\
-\
-      <div class="proof">\
-        <div class="img">\
-          <img src="assets/before-water-damage-hardwood-floors.jpg" alt="Before water damage restoration showing damaged hardwood floors and affected interior" style="width:100%; height:240px; object-fit:cover; display:block;">\
-          <div class="cap"><b>BEFORE:</b> documented loss condition with water intrusion impacting hardwood flooring and interior materials</div>\
-        </div>\
-        <div class="img">\
-          <img src="assets/after-water-damage-restoration-hardwood-floors.jpg" alt="After water damage restoration showing rebuilt interior with hardwood floors and finished living space" style="width:100%; height:240px; object-fit:cover; display:block;">\
-          <div class="cap"><b>AFTER:</b> restored to pre-loss condition with rebuilt structure and refinished hardwood floors</div>\
-        </div>\
-      </div>\
-    </div>\
-  </section>\
-\
-  <!-- CONTACT -->\
-  <section id="contact">\
-    <div class="container">\
-      <h2>Request a site inspection</h2>\
-      <p class="lead">Tell us what happened. We respond fast and advise next steps \'97 with an inspection-ready approach.</p>\
-\
-      <div class="contact">\
-        <div class="panel">\
-          <h3>Claims & emergency contact</h3>\
-          <ul>\
-            <li><b>24/7 Emergency:</b> (305) 972-2232</li>\
-            <li><b>Claims Email:</b> carlos@acmgcc.com</li>\
-            <li><b>Service Area:</b> California, Texas &amp; Florida</li>\
-          </ul>\
-          \
-        </div>\
-\
-        <div class="form" aria-label="Lead form">\
-          <input placeholder="Full Name" />\
-          <input placeholder="Phone" />\
-          <input placeholder="Property Address" />\
-          <select>\
-            <option>Type of Loss</option>\
-            <option>Water</option>\
-            <option>Fire / Smoke</option>\
-            <option>Mold</option>\
-            <option>Other</option>\
-          </select>\
-          <select>\
-            <option>Is this an insurance claim?</option>\
-            <option>Yes</option>\
-            <option>No</option>\
-          </select>\
-          <textarea placeholder="Brief description (optional): what happened, when, and current conditions."></textarea>\
-          <a class="btn primary" style="width:100%;" href="#">Submit Request</a>\
-          <div style="margin-top:10px; color:rgba(11,18,32,.62); font-size:12.5px;">Emergency situation? Call now \'97 24/7 response.</div>\
-        </div>\
-      </div>\
-    </div>\
-  </section>\
-</main>\
-\
-<footer>\
-  <div class="container">\
-    <div class="foot">\
-      <div>\'a9 ACM General Contractors \'97 Abatement \'95 Construction \'95 Mitigation<br><span style="font-size:11.5px; color:rgba(11,18,32,.55);">Services provided in California, Texas, and Florida. Availability, scope, and regulatory requirements vary by jurisdiction. All work performed in accordance with applicable state and local laws.</span></div>\
-      <div>Simple. Corporate. Adjuster-ready.</div>\
-    </div>\
-  </div>\
-</footer>\
-\
-<!-- Mobile sticky bar -->\
-<div class="mobilebar">\
-  <a class="btn primary" href="tel:3059722232">Call 24/7</a>\
-  <a class="btn ghost" href="#contact">Inspection</a>\
-</div>\
-\
-</body>\
-</html>\
-}
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.55;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{ color:inherit; text-decoration:none; }
+    img{ max-width:100%; display:block; }
+
+    .container{ max-width:var(--max); margin:0 auto; padding:0 22px; }
+
+    /* Header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+    }
+    .header{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      min-width:240px;
+    }
+    .brand img{
+      height:44px; width:auto;
+    }
+    .brand .title{ display:flex; flex-direction:column; line-height:1.1; }
+    .brand .title strong{ font-weight:800; font-size:14px; letter-spacing:.01em; }
+    .brand .title span{ font-size:11px; color:var(--muted); letter-spacing:.14em; text-transform:uppercase; }
+
+    nav{ display:flex; gap:16px; align-items:center; justify-content:center; flex:1; }
+    nav a{
+      font-size:13px;
+      color:rgba(11,18,32,.82);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+    nav a:hover{ background:rgba(30,64,175,.07); }
+
+    .cta{ display:flex; gap:10px; align-items:center; min-width:240px; justify-content:flex-end; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:11px 16px; border-radius:999px;
+      font-weight:700; font-size:13px;
+      border:1px solid transparent;
+      transition:transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      white-space:nowrap;
+    }
+    .btn:active{ transform:translateY(1px); }
+    .btn.primary{ background:var(--brand); color:#fff; box-shadow:0 12px 28px rgba(30,64,175,.25); }
+    .btn.primary:hover{ box-shadow:0 16px 38px rgba(30,64,175,.30); }
+    .btn.ghost{ background:rgba(30,64,175,.05); color:var(--brand); border-color:rgba(30,64,175,.18); }
+    .btn.ghost:hover{ background:rgba(30,64,175,.08); border-color:rgba(30,64,175,.28); }
+
+    /* Hero */
+    .hero{
+      padding:70px 0 22px;
+      background:
+        radial-gradient(1200px 520px at 10% 0%, rgba(30,64,175,.12), transparent 55%),
+        radial-gradient(900px 500px at 92% 18%, rgba(11,27,59,.10), transparent 60%),
+        linear-gradient(180deg, #FFFFFF, #FFFFFF);
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:40px;
+      align-items:center;
+    }
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:16px; }
+    .chip{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:7px 12px; border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.75);
+      color:rgba(11,18,32,.78);
+      font-size:12px; font-weight:600;
+    }
+    .dot{ width:8px; height:8px; border-radius:99px; background:var(--brand); box-shadow:0 0 0 4px rgba(30,64,175,.12); }
+
+    h1{
+      margin:0 0 12px;
+      font-size:44px;
+      line-height:1.12;
+      letter-spacing:-.02em;
+    }
+    .sub{
+      margin:0 0 22px;
+      font-size:16.5px;
+      color:rgba(11,18,32,.72);
+      max-width:62ch;
+    }
+
+    .hero-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+
+    .trust{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:22px;
+    }
+    .trust .pill{
+      padding:10px 12px;
+      border-radius:14px;
+      background:rgba(255,255,255,.86);
+      border:1px solid var(--line);
+      font-size:12.5px;
+      color:rgba(11,18,32,.70);
+      display:inline-flex; align-items:center; gap:10px;
+    }
+    .trust svg{ width:16px; height:16px; color:var(--brand); }
+
+    .hero-panel{
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:rgba(255,255,255,.75);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .panel-top{
+      padding:14px 14px 0;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:12px;
+    }
+    .badge{
+      background:rgba(11,27,59,.92);
+      color:#fff;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:10px 12px;
+      border-radius:14px;
+    }
+    .panel-body{ padding:14px; }
+    .media{
+      height:160px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(246,248,251,1), rgba(255,255,255,1));
+      display:grid; place-items:center;
+      color:rgba(91,100,114,.88);
+      font-weight:700;
+      text-align:center;
+      padding:16px;
+    }
+    .media small{ display:block; margin-top:6px; font-weight:600; color:rgba(91,100,114,.78); }
+
+    .panel-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+      margin-top:12px;
+    }
+    .panel-note{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+      background:#fff;
+      display:flex; gap:10px; align-items:flex-start;
+    }
+    .panel-note b{ font-size:13px; }
+    .panel-note p{ margin:2px 0 0; font-size:12.5px; color:rgba(11,18,32,.70); }
+
+    /* Sections */
+    section{ padding:76px 0; }
+    .soft{ background:var(--soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+
+    .section-head{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    h2{ margin:0; font-size:30px; letter-spacing:-.01em; }
+    .lead{ margin:8px 0 0; color:rgba(11,18,32,.70); max-width:74ch; }
+
+    .cards{ display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin-top:26px; }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 10px 26px rgba(11,18,32,.06);
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      min-height:220px;
+      overflow:hidden;
+    }
+    .card:hover{ transform:translateY(-2px); border-color:rgba(30,64,175,.22); box-shadow:0 16px 36px rgba(11,18,32,.08); }
+    .card .thumb{
+      height:120px;
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(246,248,251,1), rgba(255,255,255,1));
+      display:grid; place-items:center;
+      color:rgba(91,100,114,.85);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; font-weight:800; }
+    .card p{ margin:0 0 10px; color:rgba(11,18,32,.70); font-size:13.5px; }
+    .card ul{ margin:0; padding-left:18px; color:rgba(11,18,32,.70); font-size:13.5px; }
+    .card li{ margin:7px 0; }
+
+    /* Process */
+    .steps{ display:grid; grid-template-columns:repeat(5, 1fr); gap:12px; margin-top:24px; }
+    .step{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      box-shadow:0 10px 26px rgba(11,18,32,.06);
+      min-height:110px;
+    }
+    .step .n{
+      width:34px; height:34px;
+      border-radius:14px;
+      background:rgba(30,64,175,.08);
+      color:var(--brand);
+      display:grid; place-items:center;
+      font-weight:900;
+      margin-bottom:10px;
+    }
+    .step b{ display:block; font-size:13px; }
+    .step span{ display:block; margin-top:4px; color:rgba(11,18,32,.66); font-size:12.5px; }
+
+    /* Adjuster block */
+    .two{ display:grid; grid-template-columns:1.05fr .95fr; gap:18px; margin-top:24px; }
+    .panel{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 12px 34px rgba(11,18,32,.07);
+    }
+    .panel h3{ margin:0 0 10px; font-size:16px; font-weight:900; }
+    .panel ul{ margin:0; padding-left:18px; color:rgba(11,18,32,.70); font-size:13.5px; }
+    .panel li{ margin:9px 0; }
+
+    /* Proof */
+    .proof{
+      display:grid; grid-template-columns:1fr 1fr;
+      gap:14px; margin-top:24px;
+    }
+    .proof .img{
+      border:1px solid var(--line);
+      border-radius:22px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:0 14px 42px rgba(11,18,32,.08);
+    }
+    .proof .img .ph{
+      height:240px;
+      display:grid; place-items:center;
+      background:linear-gradient(180deg, rgba(246,248,251,1), rgba(255,255,255,1));
+      color:rgba(91,100,114,.9);
+      font-weight:900;
+      letter-spacing:.10em;
+      text-transform:uppercase;
+    }
+    .proof .cap{ padding:14px; font-size:12.5px; color:rgba(11,18,32,.70); }
+    .cap b{ color:rgba(11,18,32,.92); }
+
+    /* Contact */
+    .contact{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:24px; }
+    .form{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      box-shadow:0 12px 34px rgba(11,18,32,.07);
+    }
+    input, select, textarea{
+      width:100%;
+      padding:12px 12px;
+      border:1px solid #D1D7E0;
+      border-radius:14px;
+      font:inherit;
+      margin-bottom:10px;
+      outline:none;
+      background:#fff;
+      font-size:13.5px;
+    }
+    input:focus, select:focus, textarea:focus{
+      border-color:rgba(30,64,175,.55);
+      box-shadow:0 0 0 4px rgba(30,64,175,.10);
+    }
+    textarea{ min-height:106px; resize:vertical; }
+
+    footer{ padding:26px 0; border-top:1px solid var(--line); color:rgba(11,18,32,.62); font-size:12.5px; }
+    .foot{ display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; }
+
+    /* Mobile */
+    .mobilebar{
+      position:fixed; left:0; right:0; bottom:0; z-index:60;
+      display:none;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(12px);
+      border-top:1px solid var(--line);
+      padding:10px 12px;
+      gap:10px;
+    }
+    .mobilebar .btn{ flex:1; }
+
+    @media(max-width: 980px){
+      nav{ display:none; }
+      .hero-grid{ grid-template-columns:1fr; }
+      h1{ font-size:36px; }
+      .cards{ grid-template-columns:1fr; }
+      .steps{ grid-template-columns:1fr; }
+      .two{ grid-template-columns:1fr; }
+      .proof{ grid-template-columns:1fr; }
+      .contact{ grid-template-columns:1fr; }
+      .cta .ghost{ display:none; }
+      .mobilebar{ display:flex; }
+      body{ padding-bottom:72px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="header">
+      <a class="brand" href="#top" aria-label="ACM General Contractors">
+        <!-- Place your logo file at /assets/logo.png -->
+        <img src="assets/logo.png" alt="ACM General Contractors logo">
+        <div class="title">
+          <strong>ACM General Contractors</strong>
+          <span>Abatement • Construction • Mitigation</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#adjusters">For Adjusters</a>
+        <a href="#proof">Results</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta">
+        <a class="btn ghost" href="#contact">Request Inspection</a>
+        <a class="btn primary" href="tel:3059722232">Call 24/7</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="chips">
+            <span class="chip"><span class="dot"></span> Emergency Mitigation</span>
+            <span class="chip"><span class="dot"></span> Insurance-Ready Documentation</span>
+            <span class="chip"><span class="dot"></span> Residential + Commercial</span>
+          </div>
+
+          <h1>Loss stabilization first. Clean documentation. Controlled rebuild.</h1>
+          <p class="sub">
+            ACM is a GC-led restoration operator focused on <b>mitigation, abatement, and reconstruction</b> for water, fire/smoke, and mold events.
+            We run a tight workflow designed to reduce severity, protect the structure, and support carrier review.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="tel:3059722232">Call 24/7 Emergency</a>
+            <a class="btn ghost" href="#adjusters">Adjuster Packet</a>
+          </div>
+
+          <div class="trust">
+            <div class="pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Moisture mapping + daily readings (as applicable)
+            </div>
+            <div class="pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Containment-first controls
+            </div>
+            <div class="pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              Phase clarity: Mitigation → Abatement → Rebuild
+            </div>
+          </div>
+        </div>
+
+        <!-- Right hero panel: swap placeholders with real photos later -->
+        <div class="hero-panel" aria-label="Hero proof panel">
+          <div class="panel-top">
+            <div class="badge">Adjuster-Friendly</div>
+            <div style="color:rgba(11,18,32,.62); font-size:12px; font-weight:700;">Scope clarity • photo log • readings</div>
+          </div>
+          <div class="panel-body">
+            <div class="media" style="padding:0; overflow:hidden;">
+  <img src="assets/hero-mitigation.jpg" alt="Professional water damage mitigation with containment, air movers, and dehumidification equipment" style="width:100%; height:100%; object-fit:cover;">
+</div>
+
+            <div class="panel-grid">
+              <div class="panel-note">
+                <div class="dot" style="margin-top:3px"></div>
+                <div>
+                  <b>Rapid Stabilization</b>
+                  <p>Stop spread, control conditions, and protect unaffected areas.</p>
+                </div>
+              </div>
+              <div class="panel-note">
+                <div class="dot" style="margin-top:3px"></div>
+                <div>
+                  <b>Documentation Package</b>
+                  <p>Photo log, readings, equipment notes, and phase handoffs.</p>
+                </div>
+              </div>
+              <div class="panel-note">
+                <div class="dot" style="margin-top:3px"></div>
+                <div>
+                  <b>GC-Managed Rebuild</b>
+                  <p>Controlled reconstruction to code with clean close-out.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Three capabilities. One accountable operator.</h2>
+          <p class="lead">Your loss is handled end-to-end with phase clarity and inspection-ready outputs.</p>
+        </div>
+        <a class="btn ghost" href="#contact">Schedule Site Inspection</a>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="thumb" style="padding:0; overflow:hidden;">
+            <img src="assets/water-damage-mitigation-services.jpg" alt="Water damage mitigation services with professional drying equipment and moisture monitoring" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h3>Mitigation</h3>
+          <p>Extract, dry, and stabilize quickly to reduce severity and secondary damage.</p>
+          <ul>
+            <li>Water extraction & structural drying</li>
+            <li>Dehumidification & environmental control</li>
+            <li>Monitoring cadence + documented readings</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="thumb" style="padding:0; overflow:hidden;">
+            <img src="assets/mold-abatement-containment-services.jpg" alt="Mold abatement and containment services with negative air control and PPE" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h3>Abatement</h3>
+          <p>Containment-first controls and controlled removal of contaminated materials.</p>
+          <ul>
+            <li>Containment setup & negative air support</li>
+            <li>Mold-contaminated material removal</li>
+            <li>Controlled demo & debris handling</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="thumb" style="padding:0; overflow:hidden;">
+            <img src="assets/construction-rebuild-restoration-services.jpg" alt="Construction and rebuild restoration services under licensed general contractor oversight" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <h3>Construction</h3>
+          <p>Rebuild to pre-loss condition under licensed GC oversight with clean close-out.</p>
+          <ul>
+            <li>Framing, drywall, flooring, finishes</li>
+            <li>Code-compliant restoration workflow</li>
+            <li>Final walk-through & punch completion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="soft">
+    <div class="container">
+      <h2>Protocol-driven workflow</h2>
+      <p class="lead">Run the file like an operation: clean checkpoints, documented handoffs, no chaos.</p>
+
+      <div class="steps">
+        <div class="step"><div class="n">1</div><b>Inspect & Document</b><span>Photos, measurements, initial readings</span></div>
+        <div class="step"><div class="n">2</div><b>Contain & Protect</b><span>Prevent spread; protect unaffected areas</span></div>
+        <div class="step"><div class="n">3</div><b>Mitigate</b><span>Drying, dehumidification, monitoring</span></div>
+        <div class="step"><div class="n">4</div><b>Abate / Remediate</b><span>Controlled removal; restoration-ready surfaces</span></div>
+        <div class="step"><div class="n">5</div><b>Rebuild</b><span>Restore to code; close-out reporting</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR ADJUSTERS -->
+  <section id="adjusters">
+    <div class="container">
+      <h2>Built for insurance adjusters</h2>
+      <p class="lead">We reduce friction by delivering clear documentation, transparent scope, and inspection-ready conditions.</p>
+
+      <div class="two">
+        <div class="panel">
+          <h3>Standard documentation package</h3>
+          <ul>
+            <li>Pre-mitigation photo log + measurements</li>
+            <li>Moisture mapping and documented readings (as applicable)</li>
+            <li>Equipment placement notes and monitoring cadence</li>
+            <li>Phase separation: mitigation vs abatement vs rebuild</li>
+            <li>Final condition photos and close-out summary</li>
+          </ul>
+          <p style="margin:12px 0 0; color:rgba(11,18,32,.62); font-size:12.5px;">Deliverables vary by loss type, access, and site conditions.</p>
+        </div>
+
+        <div class="panel">
+          <h3>Carrier-friendly operating advantages</h3>
+          <ul>
+            <li>Single point of accountability (GC-led workflow)</li>
+            <li>Containment-first controls to reduce secondary damage</li>
+            <li>Inspection coordination and site readiness support</li>
+            <li>Clear scope alignment for faster approvals</li>
+          </ul>
+          <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="mailto:carlos@acmgcc.com">Claims Contact</a>
+            <a class="btn ghost" href="#contact">Request Inspection</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTS / PROOF -->
+  <section id="proof" class="soft">
+    <div class="container">
+      <h2>Results you can see</h2>
+
+      <div class="proof">
+        <div class="img">
+          <img src="assets/before-water-damage-hardwood-floors.jpg" alt="Before water damage restoration showing damaged hardwood floors and affected interior" style="width:100%; height:240px; object-fit:cover; display:block;">
+          <div class="cap"><b>BEFORE:</b> documented loss condition with water intrusion impacting hardwood flooring and interior materials</div>
+        </div>
+        <div class="img">
+          <img src="assets/after-water-damage-restoration-hardwood-floors.jpg" alt="After water damage restoration showing rebuilt interior with hardwood floors and finished living space" style="width:100%; height:240px; object-fit:cover; display:block;">
+          <div class="cap"><b>AFTER:</b> restored to pre-loss condition with rebuilt structure and refinished hardwood floors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2>Request a site inspection</h2>
+      <p class="lead">Tell us what happened. We respond fast and advise next steps — with an inspection-ready approach.</p>
+
+      <div class="contact">
+        <div class="panel">
+          <h3>Claims & emergency contact</h3>
+          <ul>
+            <li><b>24/7 Emergency:</b> (305) 972-2232</li>
+            <li><b>Claims Email:</b> carlos@acmgcc.com</li>
+            <li><b>Service Area:</b> California, Texas &amp; Florida</li>
+          </ul>
+          
+        </div>
+
+        <div class="form" aria-label="Lead form">
+          <input placeholder="Full Name" />
+          <input placeholder="Phone" />
+          <input placeholder="Property Address" />
+          <select>
+            <option>Type of Loss</option>
+            <option>Water</option>
+            <option>Fire / Smoke</option>
+            <option>Mold</option>
+            <option>Other</option>
+          </select>
+          <select>
+            <option>Is this an insurance claim?</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+          <textarea placeholder="Brief description (optional): what happened, when, and current conditions."></textarea>
+          <a class="btn primary" style="width:100%;" href="#">Submit Request</a>
+          <div style="margin-top:10px; color:rgba(11,18,32,.62); font-size:12.5px;">Emergency situation? Call now — 24/7 response.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div>© ACM General Contractors — Abatement • Construction • Mitigation<br><span style="font-size:11.5px; color:rgba(11,18,32,.55);">Services provided in California, Texas, and Florida. Availability, scope, and regulatory requirements vary by jurisdiction. All work performed in accordance with applicable state and local laws.</span></div>
+      <div>Simple. Corporate. Adjuster-ready.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile sticky bar -->
+<div class="mobilebar">
+  <a class="btn primary" href="tel:3059722232">Call 24/7</a>
+  <a class="btn ghost" href="#contact">Inspection</a>
+</div>
+
+</body>
+</html>
